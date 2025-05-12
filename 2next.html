@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SRET CULTURALS - Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Base Styles */
+:root {
+    --primary-color: #8e44ad;
+    --secondary-color: #9b59b6;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --gold-color: #f1c40f;
+    --text-color: #333;
+    --text-light: #fff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+/* Header */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--dark-color);
+    color: var(--text-light);
+    box-shadow: var(--shadow);
+}
+
+.sticky-header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.sticky-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+    color: var(--gold-color);
+}
+
+.tagline {
+    font-style: italic;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+nav {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 5px 0;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: var(--gold-color);
+}
+
+nav ul li a.active {
+    color: var(--gold-color);
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: var(--gold-color);
+    bottom: 0;
+    left: 0;
+    transition: var(--transition);
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%;
+}
+
+.cta-button, .hero-button, .select-button, .book-now-button, .submit-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: var(--gold-color);
+    color: var(--dark-color);
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+}
+
+.cta-button:hover, .hero-button:hover, .select-button:hover, .book-now-button:hover, .submit-button:hover {
+    background-color: #e6b800;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:active, .hero-button:active, .select-button:active, .book-now-button:active, .submit-button:active {
+    transform: translateY(-1px);
+}
+    </style>
+</head>
+<body>  
+    <header class="sticky-header">
+        <div class="container">
+            <h1>SRET CULTURALS</h1>
+            <p class="tagline">Celebrating Diversity Through Art & Performance</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#schedule">Schedule</a></li>
+                <li><a href="index.html#events">Events</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="tickets.html" class="cta-button active">Get Tickets</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="ticket-hero">
+        <div class="container">
+            <h2>Book Your Tickets</h2>
+            <p>Secure your spot for the most exciting cultural festival of the year</p>
+        </div>
+    </section>
+
+    <section class="ticket-section">
+        <div class="container">
+            <div class="ticket-container">
+                <div class="ticket-options">
+                    <h3>Ticket Options</h3>
+                    <div class="ticket-cards">
+                        <div class="ticket-card">
+                            <h4>Single Day Pass</h4>
+                            <div class="price">₹299</div>
+                            <ul class="ticket-features">
+                                <li><i class="fas fa-check"></i> Access for one day</li>
+                                <li><i class="fas fa-check"></i> All events on chosen day</li>
+                                <li><i class="fas fa-check"></i> Food court access</li>
+                                <li><i class="fas fa-times"></i> VIP seating</li>
+                                <li><i class="fas fa-times"></i> Backstage access</li>
+                            </ul>
+                            <a href="#single-day-form" class="select-button">Select</a>
+                        </div>
+                        <br>
+                        <div class="ticket-card popular">
+                            <div class="popular-badge">Most Popular</div>
+                            <h4>Three Day Pass</h4>
+                            <div class="price">₹799</div>
+                            <ul class="ticket-features">
+                                <li><i class="fas fa-check"></i> Access for all 3 days</li>
+                                <li><i class="fas fa-check"></i> All events and competitions</li>
+                                <li><i class="fas fa-check"></i> Food court access</li>
+                                <li><i class="fas fa-check"></i> Priority seating</li>
+                                <li><i class="fas fa-times"></i> Backstage access</li>
+                            </ul>
+                            <a href="#three-day-form" class="select-button">Select</a>
+                        </div>
+                        <br>
+                        <div class="ticket-card">
+                            <h4>VIP Experience</h4>
+                            <div class="price">₹1499</div>
+                            <ul class="ticket-features">
+                                <li><i class="fas fa-check"></i> All 3 days access</li>
+                                <li><i class="fas fa-check"></i> VIP seating at all events</li>
+                                <li><i class="fas fa-check"></i> Premium food vouchers</li>
+                                <li><i class="fas fa-check"></i> Meet & greet with performers</li>
+                                <li><i class="fas fa-check"></i> Limited edition merchandise</li>
+                            </ul>
+                            <a href="#vip-form" class="select-button">Select</a>
+                        </div>
+                    </div>
+                </div><br>
+                
+                <!-- Booking Forms -->
+                <div class="booking-form-container">
+                    <!-- Single Day Form -->
+                    <div id="single-day-form" class="booking-form">
+                        <h3>Single Day Pass Booking</h3>
+                        <form action="process_booking.php" method="POST">
+                            <input type="hidden" name="ticket_type" value="Single Day Pass">
+                            <input type="hidden" name="price" value="299">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <button type="submit" class="submit-button">Book Now</button>
+                        </form>
+                    </div><br>
+
+                    <!-- Three Day Form -->
+                    <div id="three-day-form" class="booking-form">
+                        <h3>Three Day Pass Booking</h3>
+                        <form action="process_booking.php" method="POST">
+                            <input type="hidden" name="ticket_type" value="Three Day Pass">
+                            <input type="hidden" name="price" value="799">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <button type="submit" class="submit-button">Book Now</button>
+                        </form>
+                    </div>
+                    <br>
+                    <!-- VIP Form -->
+                    <div id="vip-form" class="booking-form">
+                        <h3>VIP Experience Booking</h3>
+                        <form action="process_booking.php" method="POST">
+                            <input type="hidden" name="ticket_type" value="VIP Experience">
+                            <input type="hidden" name="price" value="1499">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <button type="submit" class="submit-button">Book Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 SRET CULTURALS | All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
